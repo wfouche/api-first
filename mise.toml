@@ -16,9 +16,28 @@ run = """
     npm install --save-dev @typespec/versioning
 """
 
-[tasks.codegen-typespec]
+[tasks.codegen-openapi-yaml]
 dir = "01-typespec"
 run = """
     tsp compile main.tsp --output-dir ../02-spring-boot/src/main/resources/static
     tsp format main.tsp
+"""
+
+[tasks.codegen-spring-boot]
+run = """
+jbang org.openapitools:openapi-generator-cli:LATEST generate \
+    -g spring \
+    -i 02-spring-boot/src/main/resources/static/openapi.yaml \
+      --api-package=org.example.wsv.generated.openapi.api \
+    --model-package=org.example.wsv.generated.openapi.dto \
+    -o ./generated-code \
+    --additional-properties=\
+interfaceOnly=true,\
+useSpringBoot4=true,\
+useJspecify=true,\
+openApiNullable=false
+
+rsync -av --delete ./generated-code/src/main/java/org/example/wsv/generated/openapi ./02-spring-boot/src/main/java/org/example/wsv/generated/openapi
+
+rm -f -r ./generated-code
 """
