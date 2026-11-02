@@ -1,7 +1,7 @@
 [tools]
-java = "temurin-25"
+java = "temurin-21"
 jbang = "latest"
-node = "24"
+node = "24.22.2"
 "npm:@typespec/compiler" = "latest"
 
 [tasks.install-npms]
