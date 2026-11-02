@@ -15,11 +15,6 @@
 
 * `mise codegen-typespec`
 
-== Show OpenApi.yaml file
+== Generate API and DTO classes
 
-* `ls -l 02-spring-boot/src/main/resources/static`
-+
-[source,bash]
-----
-openapi.yaml
-----
+* `mise codegen-spring-boot`

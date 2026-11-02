@@ -16,7 +16,7 @@ run = """
     npm install --save-dev @typespec/versioning
 """
 
-[tasks.codegen-openapi-yaml]
+[tasks.codegen-typespec]
 dir = "01-typespec"
 run = """
     tsp compile main.tsp --output-dir ../02-spring-boot/src/main/resources/static
