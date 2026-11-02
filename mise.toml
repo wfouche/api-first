@@ -20,6 +20,6 @@ run = """
 [tasks.codegen-typespec]
 dir = "01-typespec"
 run = """
-    tsp compile main.tsp --output-dir ./src/main/resources/static
+    tsp compile main.tsp --output-dir ../02-spring-boot/src/main/resources/static
     tsp format main.tsp
 """
