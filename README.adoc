@@ -1,0 +1,23 @@
+= api-first
+:sectnums:
+
+== Setup using Mise
+
+=== Install Tools
+
+* `mise install`
+
+=== Install NPM Packages
+
+* `mise install-npms`
+
+== Compile TypeSpec
+
+* `mise codegen-typespec`
+
+* `ls -l 02-spring-boot/src/main/resources/static`
++
+[source,bash]
+----
+openapi.yaml
+----
