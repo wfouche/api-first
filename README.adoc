@@ -15,6 +15,8 @@
 
 * `mise codegen-typespec`
 
+== Show OpenApi.yaml file
+
 * `ls -l 02-spring-boot/src/main/resources/static`
 +
 [source,bash]
