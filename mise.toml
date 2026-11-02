@@ -16,7 +16,6 @@ run = """
     npm install --save-dev @typespec/versioning
 """
 
-
 [tasks.codegen-typespec]
 dir = "01-typespec"
 run = """

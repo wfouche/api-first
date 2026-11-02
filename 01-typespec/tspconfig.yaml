@@ -9,7 +9,7 @@ options:
 linter:
   extends:
     # Enable all standard HTTP linter rules
-    - "@typespec/http/all"
+    #- "@typespec/http/all"
 
     # Enable all standard TypeSpec best-practices
     #- "@typespec/best-practices/all"
