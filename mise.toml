@@ -40,5 +40,11 @@ hideGenerationTimestamp=true
 
 rsync -a --delete ./generated-code/src/main/java/org/example/wsv/generated/openapi ./02-spring-boot/src/main/java/org/example/wsv/generated/openapi
 
+jbang run jbang-fmt@jbangdev \
+   --style google \
+   --line-length 120 \
+   ./02-spring-boot/src/main/java \
+   ./02-spring-boot/src/test/java
+
 rm -f -r ./generated-code
 """

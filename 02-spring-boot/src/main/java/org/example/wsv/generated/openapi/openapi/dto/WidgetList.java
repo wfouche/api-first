@@ -55,7 +55,7 @@ public class WidgetList {
    * Get items
    * @return items
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "items", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("items")
   public List<@Valid Widget> getItems() {

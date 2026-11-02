@@ -31,7 +31,7 @@ public class Widget {
    */
   public enum ColorEnum {
     RED("red"),
-    
+
     BLUE("blue");
 
     private final String value;
@@ -85,7 +85,7 @@ public class Widget {
    * Get id
    * @return id
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "id", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("id")
   public String getId() {
@@ -106,7 +106,7 @@ public class Widget {
    * Get weight
    * @return weight
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "weight", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("weight")
   public Integer getWeight() {
@@ -127,7 +127,7 @@ public class Widget {
    * Get color
    * @return color
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "color", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("color")
   public ColorEnum getColor() {
@@ -148,9 +148,8 @@ public class Widget {
       return false;
     }
     Widget widget = (Widget) o;
-    return Objects.equals(this.id, widget.id) &&
-        Objects.equals(this.weight, widget.weight) &&
-        Objects.equals(this.color, widget.color);
+    return Objects.equals(this.id, widget.id) && Objects.equals(this.weight, widget.weight)
+        && Objects.equals(this.color, widget.color);
   }
 
   @Override

@@ -46,7 +46,7 @@ public class Error {
    * Get code
    * @return code
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "code", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("code")
   public Integer getCode() {
@@ -67,7 +67,7 @@ public class Error {
    * Get message
    * @return message
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "message", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("message")
   public String getMessage() {
@@ -88,8 +88,7 @@ public class Error {
       return false;
     }
     Error error = (Error) o;
-    return Objects.equals(this.code, error.code) &&
-        Objects.equals(this.message, error.message);
+    return Objects.equals(this.code, error.code) && Objects.equals(this.message, error.message);
   }
 
   @Override

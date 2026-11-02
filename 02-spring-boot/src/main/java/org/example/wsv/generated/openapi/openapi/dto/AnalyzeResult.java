@@ -46,7 +46,7 @@ public class AnalyzeResult {
    * Get id
    * @return id
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "id", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("id")
   public String getId() {
@@ -67,7 +67,7 @@ public class AnalyzeResult {
    * Get analysis
    * @return analysis
    */
-  @NotNull 
+  @NotNull
   @Schema(name = "analysis", requiredMode = Schema.RequiredMode.REQUIRED)
   @JsonProperty("analysis")
   public String getAnalysis() {
@@ -88,8 +88,7 @@ public class AnalyzeResult {
       return false;
     }
     AnalyzeResult analyzeResult = (AnalyzeResult) o;
-    return Objects.equals(this.id, analyzeResult.id) &&
-        Objects.equals(this.analysis, analyzeResult.analysis);
+    return Objects.equals(this.id, analyzeResult.id) && Objects.equals(this.analysis, analyzeResult.analysis);
   }
 
   @Override

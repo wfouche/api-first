@@ -31,7 +31,7 @@ public class WidgetMergePatchUpdate {
    */
   public enum ColorEnum {
     RED("red"),
-    
+
     BLUE("blue");
 
     private final String value;
@@ -72,7 +72,7 @@ public class WidgetMergePatchUpdate {
    * Get id
    * @return id
    */
-  
+
   @Schema(name = "id", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("id")
   public @Nullable String getId() {
@@ -93,7 +93,7 @@ public class WidgetMergePatchUpdate {
    * Get weight
    * @return weight
    */
-  
+
   @Schema(name = "weight", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("weight")
   public @Nullable Integer getWeight() {
@@ -114,7 +114,7 @@ public class WidgetMergePatchUpdate {
    * Get color
    * @return color
    */
-  
+
   @Schema(name = "color", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
   @JsonProperty("color")
   public @Nullable ColorEnum getColor() {
@@ -135,9 +135,9 @@ public class WidgetMergePatchUpdate {
       return false;
     }
     WidgetMergePatchUpdate widgetMergePatchUpdate = (WidgetMergePatchUpdate) o;
-    return Objects.equals(this.id, widgetMergePatchUpdate.id) &&
-        Objects.equals(this.weight, widgetMergePatchUpdate.weight) &&
-        Objects.equals(this.color, widgetMergePatchUpdate.color);
+    return Objects.equals(this.id, widgetMergePatchUpdate.id)
+        && Objects.equals(this.weight, widgetMergePatchUpdate.weight)
+        && Objects.equals(this.color, widgetMergePatchUpdate.color);
   }
 
   @Override
