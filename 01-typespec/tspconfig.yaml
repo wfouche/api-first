@@ -1,0 +1,18 @@
+emit:
+  - "@typespec/openapi3"
+options:
+  "@typespec/openapi3":
+    emitter-output-dir: "{output-dir}"
+    openapi-versions:
+      - 3.1.0
+
+linter:
+  extends:
+    # Enable all standard HTTP linter rules
+    - "@typespec/http/all"
+
+    # Enable all standard TypeSpec best-practices
+    #- "@typespec/best-practices/all"
+
+    # If using Azure rulesets:
+    # - "@azure-tools/typespec-azure-core/all"

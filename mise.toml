@@ -1,0 +1,25 @@
+[tools]
+java = "temurin-25"
+jbang = "latest"
+node = "24"
+"npm:@typespec/compiler" = "latest"
+
+[tasks.install-npms]
+description = "Install NPM packagaes for TypeSpec"
+dir = "01-typespec"
+run = """
+    npm install --save-dev @typespec/http
+    npm install --save-dev @typespec/http-client-js
+    npm install --save-dev @typespec/library-linter
+    npm install --save-dev @typespec/openapi3
+    npm install --save-dev @typespec/rest
+    npm install --save-dev @typespec/versioning
+"""
+
+
+[tasks.codegen-typespec]
+dir = "01-typespec"
+run = """
+    tsp compile main.tsp --output-dir ./src/main/resources/static
+    tsp format main.tsp
+"""
