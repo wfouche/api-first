@@ -1,3 +1,5 @@
 
 /01-typespec/node_modules/
 /.idea/
+/01-typespec/package.json
+/01-typespec/package-lock.json
