@@ -25,7 +25,7 @@ run = """
 
 [tasks.codegen-spring-boot]
 run = """
-jbang org.openapitools:openapi-generator-cli:LATEST generate \
+jbang org.openapitools:openapi-generator-cli:RELEASE generate \
     -g spring \
     -i 02-spring-boot/src/main/resources/static/openapi.yaml \
       --api-package=org.example.wsv.generated.openapi.api \
@@ -35,9 +35,10 @@ jbang org.openapitools:openapi-generator-cli:LATEST generate \
 interfaceOnly=true,\
 useSpringBoot4=true,\
 useJspecify=true,\
-openApiNullable=false
+openApiNullable=false,\
+hideGenerationTimestamp=true
 
-rsync -av --delete ./generated-code/src/main/java/org/example/wsv/generated/openapi ./02-spring-boot/src/main/java/org/example/wsv/generated/openapi
+rsync -a --delete ./generated-code/src/main/java/org/example/wsv/generated/openapi ./02-spring-boot/src/main/java/org/example/wsv/generated/openapi
 
 rm -f -r ./generated-code
 """
